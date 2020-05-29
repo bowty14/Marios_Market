@@ -11,6 +11,5 @@ describe "the add a product process" do
     save_and_open_page
     expect(page).to have_content 'Dragon Fruit'
   end
-
-  
 end
+
