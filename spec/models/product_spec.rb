@@ -7,4 +7,6 @@ describe Product do
     product = Product.create({name: "dragon fruit"})
     expect(product.name()).to(eq("Dragon Fruit"))
   end
+
+  it { should validate_presence_of :name}
 end
