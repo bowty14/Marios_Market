@@ -34,6 +34,7 @@ class ReviewsController < ApplicationController
       redirect_to product_path(@review.product)
       else
         render :edit
+    end
   end
 
   def destroy

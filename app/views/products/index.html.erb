@@ -1,0 +1,14 @@
+<h1>Available Products</h1>
+
+<% if @products.any?%>
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <%end%>
+</ul>
+<%else%>
+<p>We seem to be sold out, please check back at a later time. Thank you for letting us serve you.</p>
+<%end%>
+
+<p><%= link_to "Add a new product", new_product_path %></p>
+

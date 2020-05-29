@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all 
-    render :idex
+    render :index
   end
 
   def new
@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
       redirect_to products_path
       else
         render :edit
+    end
   end
 
   def destroy
