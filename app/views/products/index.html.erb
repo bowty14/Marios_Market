@@ -1,4 +1,6 @@
 <h1>Available Products</h1>
+<p><%= link_to "Add a new product", new_product_path %></p>
+<p><%= link_to "Return to homepage", root_path %></p>
 
 <% if @products.any?%>
 <ul>
@@ -10,6 +12,4 @@
 <p>We seem to be sold out, please check back at a later time. Thank you for letting us serve you.</p>
 <%end%>
 
-<p><%= link_to "Add a new product", new_product_path %></p>
-<p><%= link_to "Return to homepage", root_path %></p>
 
