@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe Review do
-  product = Product.create({name: "dragon fruit", cost: 10, country_of_origin: "spain"})
   it {should belong_to (:product)}
   it {should validate_presence_of :author}
   it {should validate_presence_of :content_body}
