@@ -1,16 +1,5 @@
-<%= render "layouts/errors", :object => @review %>
-<h1>Edit <%= @product.name %> details</h1>
+<%= render "layouts/errors", :object => @product %>
+<%= render "layouts/product_form", :object => @product %>
 
-
-<%= form_for @product do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :cost %>
-<%= f.text_field :cost %>
-<%= f.label :country_of_orgin %>
-<%= f.text_field :country_of_origin %>
-<%= f.submit %>
-<%end%>
 
 <p><%= link_to "Return to product page", product_path(@product) %></p>
-<p><%= link_to "Return product list", products_path %></p>

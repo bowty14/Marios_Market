@@ -6,7 +6,7 @@ Product.destroy_all
   product = Product.create!(name: Faker::Food.fruits,
                           cost: Faker::Number.number(digits: 2),
                           country_of_origin: Faker::Nation.capital_city)
-  250.times do
+  5.times do
     review = product.reviews.new(author: Faker::FunnyName.name,
                             content_body: Faker::Hipster.sentence(word_count: 15))
                             review.save
