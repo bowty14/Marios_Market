@@ -1,6 +1,6 @@
 <h1>Review of: <%= @product.name %></h1>
 <h3><%= @review.content_body %></h3>
-<h3><%= @review.rating %></h3>
+<h3>This user rated <%= @product.name %> at <%= @review.rating %> out of 5 stars.</h3>
 <% if current_user && current_user.admin %>
   <%= link_to "Edit review", edit_product_review_path(@product, @review) %>
   <br>

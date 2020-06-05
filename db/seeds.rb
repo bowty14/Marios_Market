@@ -8,7 +8,8 @@ Product.destroy_all
                           country_of_origin: Faker::Nation.capital_city)
   5.times do
     review = product.reviews.new(author: Faker::FunnyName.name,
-                            content_body: Faker::Hipster.sentence(word_count: 15))
+                            content_body: Faker::Hipster.sentence(word_count: 15),
+                            rating: Faker::Number.between(from: 1, to: 5))
                             review.save
   end
 end
