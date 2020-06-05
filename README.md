@@ -1,4 +1,4 @@
-## Project created on 5/29/2020
+## Project created on 5/29/2020 updated 6/5/2020
 
 # Mario's Speciality Food Products
 
@@ -10,14 +10,13 @@ This application allows the user to create, view, update and delete products. Th
 
 ## Specifications
 
-|   Behavior Description                              |  Input Ex.                          |        Output Ex.                   |
-|----------------------------------------------------|---------------------------------------|-------------------------------------------------|
-|1. As a user, I want to view,<br> and add products.|Type product name<br> in text field on<br> the add a new product page .(Coffee)|When you hit the submit<br> button you will be redirected<br> to the products page where<br> you can view the <br>created product(s)|
-|2. As a user, I want to update products.|When you click on<br>  the product name, from<br>  the  products page<br>  you can click on the link<br>  "Edit product" Then type<br>  the name or any other asspect you'd like to update<br>  the product to|On submit you <br> will return to the products page<br> where you can see <br> the product<br>  has been updated.|
-|3. As a user, I want to delete products.|When you click on the <br> product name, on <br> the products page you can<br>  click on the link<br>  "Delete product"|On submit you will<br>  return to the products<br> page where you can see that the <br>  product has been deleted.|
-|4. As a user, I want to view,<br> and add reviews.|Type your name<br> in text field on<br> the add a new review page, click one of the buttons labeled 1 -5 to rate the product, fill out the large text box to share your thoughts|When you hit the submit<br> button you will be redirected<br> to the product page where<br> you can view the <br>created review(s)|
-|5. As a user, I want to update reviews.|When you click on<br>  the reviews name, from<br>  the  product page<br>  you can click on the link<br>  "Edit review" Then type<br>  the name or any other asspect you'd like to update<br>  the review to|On submit you <br> will return to the product page<br> where you can see <br> the review<br>  has been updated.|
-|6. As a user, I want to delete reviews.|When you click on the <br> name of the person who left the review, on <br> the product page you can<br>  click on the link<br>  "Delete review"|On submit you will<br>  return to the product<br> page where you can see that the <br>  review has been deleted.|
+|   Behavior Description|  Input Ex.                          |        Output Ex.      |
+|------------------------|-----------|-------------------------------------------------|
+|1. As an admin, I should be able to log in and log out of the application.|click sign in button, fill out fields, hit submit./click the log out button|"You have successfully logged in"/ "You have successfully logged out"|
+|2. As an admin, I should be able to add, update and delete products.|click Add a new product, fill out the field, hit submit/click on a product, click the edit product button, fill out all field and click submit/click on product, click delete product button|your new product will be visible\click on updated product, all fields will be updated/selected product is now deleted.|
+|3. As an admin, I should be able to add reviews.|click on product, click on add review, fill out all fields, click submit| your review will be visible when you click on same product.|
+|4. As an admin, I want to ensure that other users don't have access to CRUD functionality.|only users that have been given the admin tag will have full CRUD| regular users will never seen any of the links that admin will.|
+|5. As a user, I want to be able to create an account and add a review to a product.|click on product, click on add review, fill out all fields, click submit| your review will be visible when you click on same product.|
 
 
 ## Setup/Installation Requirements
