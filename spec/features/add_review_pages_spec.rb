@@ -1,8 +1,11 @@
 describe "the add a review process" do
+    before(:each) do
+      Product.destroy.all
+    end
   product = Product.create({name: "Egg Whites", cost: 10, country_of_origin: "US"})
   it "adds a new review" do
       visit signin_path
-      fill_in :email, :with => "tylerbowerman@yahoo.com"
+      fill_in :email, :with => "t@t.com"
       fill_in "Password", :with => "Venom9314"
       click_on "Go"
       save_and_open_page
