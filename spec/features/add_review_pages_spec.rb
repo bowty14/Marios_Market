@@ -1,8 +1,12 @@
 describe "the add a review process" do
   product = Product.create({name: "Egg Whites", cost: 10, country_of_origin: "US"})
   it "adds a new review" do
-      visit products_path
-      click_link 'Egg Whites'
+      visit signin_path
+      fill_in :email, :with => "tylerbowerman@yahoo.com"
+      fill_in "Password", :with => "Venom9314"
+      click_on "Go"
+      save_and_open_page
+      click_on "Egg Whites"
       click_link "Add a review"
       fill_in "Please enter your name", :with => "Tyler"
       choose(option: "5")
