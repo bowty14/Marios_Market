@@ -1,31 +1,4 @@
+<%= render "layouts/errors", :object => @review %>
 <h1>Edit review on <%= @product.name %> </h1>
 <h3>Here you can edit all aspects of your review </h3>
-
-
-<%= form_for [@product, @review] do |f| %>
-<%= f.label :author, "Please enter your name" %>
-<%= f.text_field :author  %>
-<br>
-<br>
-<%= f.label :rating, "Give this star rating between 1-5 " %>
-<br>
-<%= f.label :rating, "5" %>
-<%= f.radio_button(:rating, "5")%>
-<%= f.label :rating, "4" %>
-<%= f.radio_button(:rating, "4") %>
-<%= f.label :rating, "3" %>
-<%= f.radio_button(:rating, "3") %>
-<%= f.label :rating, "2" %>
-<%= f.radio_button(:rating, "2") %>
-<%= f.label :rating, "1" %>
-<%= f.radio_button(:rating, "1") %>
-<br>
-<br>
-<%= f.label :content_body, "Type your review here"%>
-<br>
-<%= f.text_area :content_body, :rows => "10" %>
-<%= f.submit %>
-<%end%>
-
-<p><%= link_to "Return to product page", product_path(@product) %></p>
-<p><%= link_to "Return product list", products_path %></p>
+<%= render "layouts/review_form", :object => @review %>

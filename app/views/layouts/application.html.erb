@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CodeReview11</title>
+    <title>Mario's specialty foods!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h1 class="navbar-brand"></h1>
+        </div>
+        <ul class="nav navbar-nav">
+        <% if current_user %>
+        <li><%= current_user.email %></li>  <li><%= link_to "Home", '/'%></li>
+        <li><%= link_to "Sign out", '/signout'%></li>
+
+        <% else %>
+          <li><%= link_to "Sign up", '/signup'%></li>
+          <li><%= link_to "Sign in", '/signin'%></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    
+  </div>
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
     <%= yield %>
+    
   </body>
 </html>

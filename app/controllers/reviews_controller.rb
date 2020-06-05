@@ -7,11 +7,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-     @product = Product.find(params[:product_id])
-     @review = @product.reviews.new(review_params)
-     if @review.save
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new(review_params)
+    if @review.save
       redirect_to product_path(@product)
-     else
+    else
       render :new
     end
   end

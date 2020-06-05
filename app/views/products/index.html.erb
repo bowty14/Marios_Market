@@ -1,9 +1,13 @@
 <h1>Available Products</h1>
-<p><%= link_to "Add a new product", new_product_path %></p>
-<p><%= link_to "Return to homepage", root_path %></p>
+<% if current_user && current_user.admin %>
+  <%= link_to "Add a new product", new_product_path %></p>
+  <% end %>
+        
+
+
 
 <% if @products.any?%>
-<ul>
+<ul class="products">
   <% @products.each do |product| %>
   <li><%= link_to product.name, product_path(product) %></li>
   <%end%>

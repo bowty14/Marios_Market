@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  background-color: lightsteelblue;
+  text-align: center;
+}
+.container-fluid{
+  background-color: lightblue;
+}
+.products {
+  text-align: justify;
+}
+.product {
+  text-align: justify;
+}
