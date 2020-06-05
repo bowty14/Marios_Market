@@ -10,10 +10,6 @@
 
 <% if @product.reviews.any? %>
   <h4>Here are some reviews for this product:</h4>
-  <%= link_to "Add a review", new_product_review_path(@product) %>
-  <br>
-  <p><%= link_to "Return product list", products_path %></p>
-
   <% @product.reviews.each do |review| %>
     <ul class="product">
       <li>
@@ -24,6 +20,9 @@
 <% else %>
   <p>There are no reviews for this product yet. Be the first to review it!</p>
 <% end %>
+<%= link_to "Add a review", new_product_review_path(@product) %>
+<br>
+<p><%= link_to "Return product list", products_path %></p>
 
 
 
