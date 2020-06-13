@@ -1,12 +1,15 @@
+<% if current_user && current_user.admin %>
+<button type="button" class="btn btn-success"><%= link_to "Edit product", edit_product_path(@product) %></button>
+<br>
+<br>
+<button type="button" class="btn btn-danger"><%= link_to "Delete product", product_path(@product),
+                          :data => {:confirm => "Are you sure?",
+                                         :method => "delete"} %>
+  <% end %>
+</button>
+
 <h1><%= @product.name %> is imported from <%= @product.country_of_origin %></h1>
 <h3>The price for this product is $<%= @product.cost %> USD</h3>
-<% if current_user && current_user.admin %>
-  <%= link_to "Edit product", edit_product_path(@product) %>
-  <br>
-  <%= link_to "Delete product", product_path(@product),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %>
-  <% end %>
 
 <% if @product.reviews.any? %>
   <h4>Here are some reviews for this product:</h4>
@@ -20,9 +23,9 @@
 <% else %>
   <p>There are no reviews for this product yet. Be the first to review it!</p>
 <% end %>
-<%= link_to "Add a review", new_product_review_path(@product) %>
+<button type="button" class="btn btn-info"><%= link_to "Add a review", new_product_review_path(@product) %></button>
 <br>
-<p><%= link_to "Return product list", products_path %></p>
+<button type="button" class="btn btn-info"><%= link_to "Return product list", products_path %></button>
 
 
 

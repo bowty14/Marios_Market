@@ -1,14 +1,19 @@
+<% if current_user && current_user.admin %>
+<button type="button"
+  class="btn btn-success"><%= link_to "Edit review", edit_product_review_path(@product, @review) %></button>
+<br>
+<br>
+<button type="button" class="btn btn-danger"><%= link_to "Delete review", product_review_path(@product, @review),
+                          :data => {:confirm => "Are you sure?",
+                                         :method => "delete"} %>
+  <% end %>
+</button>
+
 <h1>Review of: <%= @product.name %></h1>
 <h3><%= @review.content_body %></h3>
 <h3>This user rated <%= @product.name %> at <%= @review.rating %> out of 5 stars.</h3>
-<% if current_user && current_user.admin %>
-  <%= link_to "Edit review", edit_product_review_path(@product, @review) %>
-  <br>
-  <%= link_to "Delete review", product_review_path(@product, @review),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %>
-  <% end %>
 
 
 
-<p><%= link_to "Return to list of products", products_path(@product) %></p>
+
+<button type="button" class="btn btn-info"><%= link_to "Return to list of products", products_path(@product) %></button>
