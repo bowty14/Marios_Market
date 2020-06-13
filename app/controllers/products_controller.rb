@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
-  before_action :authorize, only: [:index]
+  before_action :only => [:new, :edit, :create, :destroy, :update] do 
+    redirect_to products_path unless current_user && current_user.admin 
+  end
+
   def index
     @products = Product.all 
     render :index

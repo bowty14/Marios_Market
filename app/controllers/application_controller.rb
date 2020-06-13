@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize 
-    if !current_user
+    if !current_user || !current_user.admin
       flash[:alert] = "You can not vist that page with out signing in/up first."
       redirect_to '/signin'
     end
