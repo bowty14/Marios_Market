@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
-  before_action :only => [ :edit, :destroy, :update] do 
+  before_action :only => [:index, :edit, :destroy, :update] do 
     redirect_to products_path unless current_user && current_user.admin 
+    flash[:alert] = "You can not vist that page with out signing in/up first."
 end
   def new
     @product = Product.find(params[:product_id])
@@ -35,6 +36,7 @@ end
     if @review.update(review_params)
       redirect_to product_path(@review.product)
       else
+        flash[:alert] = "There was problem updating this product, please check to see you filled the form out correctly."
         render :edit
     end
   end
