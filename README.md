@@ -1,4 +1,4 @@
-## Project created on 5/29/2020 updated 6/5/2020
+## Project created on 5/29/2020 updated 6/12/2020
 
 # Mario's Speciality Food Products
 
@@ -20,21 +20,25 @@ This application allows the user to create, view, update and delete products. Th
 
 
 ## Setup/Installation Requirements
-1. Clone this repository to your machine
-2. This app uses a database so you will have to run the following commands to get all funtionality.
-<ul>
-<li>createdb code_review11_development </li>
-<li>psql code_review11_development  < database_backup.sql</li>
-<li>createdb -T code_review11_development  code_review11_test</li>(This command makes a test database using the volunteer_tracker DB as a template)
-</ul>
-3. Install packages Ruby Gem by typing `$ bundle install` in the command line
-<br>
-4. Run the application by typing `rails server` in the command line
-<br>
-5. Visit localhost: 3000 to begin using the app
+1* _Clone repository from Github: https://github.com/bowty14/code_review11.git_
+* _In the Terminal type : `$ git clone` [https://github.com/bowty14/code_review11.git]_
+* _Navigate to folder by typing  `$ cd code_review11` in terminal._
+* _Open the file up in the code editior of choice_
+* _Install all missing dependencies and Gems, then type `bundle install`._
+* _You will need to run `bundle install` after each new Gem added to project._
+* _Make sure to check which Ruby version you are running by typing `$ ruby -v`_
+* _Make sure to check what Postgres version by typing `postgres --version` in terminal._
+* _To start the database run `postgres` in the background terminal._
+* _In a seperate terminal type `psql`, to start SQL._
+* _To run a test using Rspec, type `rpsec` into the root page of the project._
+* DATABASE INSTRUCTIONS - from the root directory of this project, run these commands to start new database:
+*         `rake db:create`
+*         `rake db:migrate`
+*        `rake db:test:prepare`
 
-## Known Bugs
-No known bugs at this time in production. However in testing I am unable to get a integration test for creating a review to pass.
+* _To view project in browser type in terminal, `rails s`._
+* _Navigate to localhost:3000_
+
 
 ## Support and contact details
 _Have a bug or an issue with this application? [Open a new issue](https://github.com/bowty14/code_review11/issues) here on GitHub.com_
