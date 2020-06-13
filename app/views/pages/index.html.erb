@@ -11,6 +11,28 @@
 <p><%= link_to "See what's available", '/products' %></p>
 
 
+<div class="row">
+  <p>We are located in Portland , at 1234 SW Taylor St,Portland, OR 97204</p>
+  <p>Our main phone number is (503)222-0604, we'd love to hear from you.</p>
 
-<p>We are located in Portland , at 1234 SW Taylor St,Portland, OR 97204</p>
-<p>Our main phone number is (503)222-0604, we'd love to hear from you.</p>
+  <h4>Check a few of our most recent products!</h4>
+  <ul>
+    <% Product.three_most_recent.each do |product|%>
+     <li><%= link_to product.name, product_path(product)%></li>
+    <% end %>
+  </ul>
+
+  <h4>This is our current most popular product! (based on your reviews):</h4>
+  <ul>
+    <% Product.most_reviews.each do |product| %>
+    <li> <%= link_to product.name, product_path(product) %></li>
+    <%end%>
+  </ul>
+
+  <h4> These product were made right here in the USA!</h4>
+  <ul>
+    <% Product.search("United States").each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+</div>
