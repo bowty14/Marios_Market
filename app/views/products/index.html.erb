@@ -1,7 +1,10 @@
-<h1>Available Products</h1>
+
 <% if current_user && current_user.admin %>
-  <%= link_to "Add a new product", new_product_path %></p>
-  <% end %>
+<button type="button" class="btn btn-info"><%= link_to "Add a new product", new_product_path %></button>
+<% end %>
+<h1>Available Products</h1>
+
+
         
 
 
