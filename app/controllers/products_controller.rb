@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
-  before_action :only => [:new, :edit, :create, :destroy, :update] do 
-    redirect_to products_path unless current_user && current_user.admin 
+  before_action :authorize, :only => [:index, :new, :edit, :create, :destroy, :update ] do 
+    redirect_to '/' unless current_user && current_user.admin 
   end
-
+  
   def index
     @products = Product.all 
     render :index
@@ -37,6 +37,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to products_path
       else
+        flash[:alert] = "There was problem updating this product, please check to see you filled the form out correctly."
         render :edit
     end
   end
