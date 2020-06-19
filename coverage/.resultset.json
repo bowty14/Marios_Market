@@ -4,6 +4,7 @@
       "/Users/tylerbowerman/Desktop/code_review11/spec/features/add_product_spec.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
           1,
@@ -358,13 +359,13 @@
           1,
           null,
           1,
-          36,
-          34,
+          52,
+          50,
           null,
           null,
           null,
           1,
-          4,
+          10,
           0,
           0,
           null,
@@ -394,6 +395,9 @@
         "lines": [
           1,
           1,
+          10,
+          null,
+          null,
           1,
           4,
           4,
@@ -428,6 +432,7 @@
           0,
           0,
           null,
+          0,
           0,
           null,
           null,
@@ -449,6 +454,9 @@
       "/Users/tylerbowerman/Desktop/code_review11/app/controllers/reviews_controller.rb": {
         "lines": [
           1,
+          1,
+          0,
+          0,
           null,
           1,
           1,
@@ -482,7 +490,9 @@
           0,
           0,
           0,
+          0,
           null,
+          0,
           0,
           null,
           null,
@@ -587,6 +597,18 @@
           1,
           4,
           null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
           null
         ]
       },
@@ -705,6 +727,6 @@
         ]
       }
     },
-    "timestamp": 1592008366
+    "timestamp": 1592610473
   }
 }
