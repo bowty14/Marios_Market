@@ -32,6 +32,7 @@ end
   end
 
   def update
+    @product = Product.find(params[:product_id])
     @review = Review.find(params[:id])
     if @review.update(review_params)
       redirect_to product_path(@review.product)
