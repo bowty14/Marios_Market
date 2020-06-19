@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :authorize, :only => [:index, :new, :edit, :create, :destroy, :update ] do 
-    redirect_to '/' unless current_user && current_user.admin 
+  before_action :authorize, :only => [:index, :new, :edit, :create, :destroy, :update, :show ] do 
+    redirect_to '/' unless current_user
   end
   
   def index

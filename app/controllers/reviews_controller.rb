@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :only => [:index, :edit, :destroy, :update] do 
-    redirect_to products_path unless current_user && current_user.admin 
+  before_action :only => [:index, :edit, :destroy, :update, :show] do 
+    redirect_to products_path unless current_user
     flash[:alert] = "You can not vist that page with out signing in/up first."
 end
   def new

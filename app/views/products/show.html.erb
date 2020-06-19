@@ -10,7 +10,7 @@
 
 <h1><%= @product.name %> is imported from <%= @product.country_of_origin %></h1>
 <h3>The price for this product is $<%= @product.cost %> USD</h3>
-
+<% if current_user %>
 <% if @product.reviews.any? %>
   <h4>Here are some reviews for this product:</h4>
   <% @product.reviews.each do |review| %>
@@ -26,6 +26,7 @@
 <button type="button" class="btn btn-info"><%= link_to "Add a review", new_product_review_path(@product) %></button>
 <br>
 <button type="button" class="btn btn-info"><%= link_to "Return product list", products_path %></button>
+
 
 
 
