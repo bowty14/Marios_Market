@@ -1,5 +1,5 @@
 <% if current_user && current_user.admin %>
-<button type="button" class="btn btn-success"><%= link_to "Edit product", edit_product_path(@product) %></button>
+<button type="button" class="btn btn-success"><%= link_to "Edit", edit_product_path(@product) %></button>
 <br>
 <br>
 <button type="button" class="btn btn-danger"><%= link_to "Delete product", product_path(@product),
