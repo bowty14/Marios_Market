@@ -1,8 +1,9 @@
 class ReviewsController < ApplicationController
-  before_action :only => [:index, :edit, :destroy, :update, :show] do 
+
+  before_action :authorize, :only => [:index, :edit, :destroy, :update, :show] do 
     redirect_to products_path unless current_user
-    flash[:alert] = "You can not vist that page with out signing in/up first."
 end
+
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
