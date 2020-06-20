@@ -1,9 +1,10 @@
+user = User.create({email: "y@y.com", password: "Qwerty1", password_confirmation: "Qwerty1", admin: "t"})
+
 describe "the add a review process" do
-  product = Product.create({name: "Egg Whites", cost: 10, country_of_origin: "US"})
   it "adds a new review" do
       visit signin_path
-      fill_in :email, :with => "t@t.com"
-      fill_in "Password", :with => "Venom9314"
+      fill_in :email, :with => "y@y.com"
+      fill_in "Password", :with => "Qwerty1"
       click_on "Go"
       click_link 'Add a new product'
       fill_in "Name", :with => 'Cheesecake'
