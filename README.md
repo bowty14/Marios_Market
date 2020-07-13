@@ -46,6 +46,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 ## Technologies Used
 * Ruby
 * Rails
+* HTML
+* SASS
 * Capybara
 ### License
 
